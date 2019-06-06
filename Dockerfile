@@ -29,4 +29,4 @@ COPY plantuml /usr/local/bin/plantuml
 WORKDIR /data
 
 ENTRYPOINT ["mkdocs"]
-CMD ["serve", "-a", "0.0.0.0:8000"]
+CMD ["serve", "--dirtyreload", "-a", "0.0.0.0:8000"]
