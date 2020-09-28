@@ -39,8 +39,8 @@ Inside your project file
 
     site_name: My Site Name
     markdown_extensions:
-        - plantuml:
-            outpath: "images"
+        - plantuml_markdown:
+            server: ''
 
 See the following site for uml usage:
 [https://github.com/mikitex70/plantuml-markdown](https://github.com/mikitex70/plantuml-markdown)
