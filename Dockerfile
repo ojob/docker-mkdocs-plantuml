@@ -10,10 +10,9 @@ RUN apk upgrade --no-cache \
   && python3 -m ensurepip \
   && pip3 install --no-cache-dir --upgrade pip \
   && rm -r /usr/lib/python*/ensurepip \
-  && pip3 install --upgrade pip setuptools \
   && if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi \
   && if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi \
-  && pip3 install mkdocs==1.0.4 mkdocs-windmill==0.1.6 mkdocs-material==3.0.4 mkdocs-pdf-export-plugin==0.2.3 plantuml plantuml-markdown==1.2.5 \
+  && pip3 install mkdocs-material mkdocs-pdf-export-plugin plantuml plantuml-markdown mkdocs-enumerate-headings-plugin \
   && mkdir -p /usr/local/bin \
   && curl -L https://sourceforge.net/projects/plantuml/files/plantuml.${PLANTUML_VERSION}.jar/download -o /usr/local/bin/plantuml.jar \
   && apk del .build-deps \ 
