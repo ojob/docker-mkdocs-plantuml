@@ -12,7 +12,7 @@ RUN apk upgrade --no-cache \
   && rm -r /usr/lib/python*/ensurepip \
   && if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi \
   && if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi \
-  && pip3 install mkdocs-material mkdocs-pdf-export-plugin plantuml plantuml-markdown mkdocs-enumerate-headings-plugin \
+  && pip3 install mkdocs-material mkdocs-pdf-export-plugin plantuml plantuml-markdown mkdocs-enumerate-headings-plugin mdx_truly_sane_lists \
   && mkdir -p /usr/local/bin \
   && curl -L https://sourceforge.net/projects/plantuml/files/plantuml.${PLANTUML_VERSION}.jar/download -o /usr/local/bin/plantuml.jar \
   && apk del .build-deps \ 
