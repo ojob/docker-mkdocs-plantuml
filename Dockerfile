@@ -1,4 +1,4 @@
-FROM openjdk:12-jdk-alpine
+FROM openjdk:17-ea-22-jdk-oracle
 
 LABEL maintainer="christian.scheja@in-tech.com"
 # ENV PLANTUML_VERSION 1.2019.0
