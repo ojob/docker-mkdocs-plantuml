@@ -1,8 +1,7 @@
 FROM openjdk:17-jdk-alpine
 
 LABEL maintainer="christian.scheja@in-tech.com"
-# ENV PLANTUML_VERSION 1.2019.0
-ENV PLANTUML_VERSION 8038
+ENV PLANTUML_VERSION 1.2022.12
 
 RUN apk upgrade --no-cache \
   && apk add --no-cache musl python3 libffi shared-mime-info zlib jpeg graphviz ttf-droid ttf-droid-nonlatin \
