@@ -1,11 +1,11 @@
-FROM openjdk:19-jdk-alpine
+FROM eclipse-temurin:20-alpine
 
 LABEL maintainer="christian.scheja@in-tech.com"
-# ENV PLANTUML_VERSION 1.2019.0
-ENV PLANTUML_VERSION 8038
+ENV PLANTUML_VERSION 1.2023.7
+# ENV PLANTUML_VERSION 8038
 
 RUN apk upgrade --no-cache \
-  && apk add --no-cache musl python3 libffi shared-mime-info zlib jpeg graphviz ttf-droid ttf-droid-nonlatin \
+  && apk add --no-cache musl python3 libffi shared-mime-info zlib jpeg graphviz font-droid font-droid-nonlatin \
   && apk add --no-cache  --virtual .build-deps curl build-base python3-dev libffi-dev zlib-dev jpeg-dev \
   && python3 -m ensurepip \
   && pip3 install --no-cache-dir --upgrade pip \
